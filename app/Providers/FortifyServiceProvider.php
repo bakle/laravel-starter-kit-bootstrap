@@ -45,6 +45,8 @@ class FortifyServiceProvider extends ServiceProvider
 
         $this->setLoginView();
         $this->setRegisterView();
+        $this->setForgotPasswordLinkView();
+        $this->setResetPasswordView();
 
 
     }
@@ -57,5 +59,17 @@ class FortifyServiceProvider extends ServiceProvider
     private function setRegisterView(): void
     {
         Fortify::registerView(fn() => view('auth.register'));
+    }
+
+    private function setForgotPasswordLinkView(): void
+    {
+        Fortify::requestPasswordResetLinkView(fn() => view('auth.forgot-password')
+        );
+    }
+
+    private function setResetPasswordView(): void
+    {
+        Fortify::resetPasswordView(fn(Request $request) => view('auth.reset-password', ['request' => $request])
+        );
     }
 }
