@@ -1,1 +1,29 @@
 @import "bootstrap/dist/css/bootstrap.css";
+
+.w-4 {
+    width: 4%;
+}
+
+.w-5 {
+    width: 5%;
+}
+
+.w-6 {
+    width: 6%;
+}
+
+.w-7 {
+    width: 7%;
+}
+
+.w-8 {
+    width: 8%;
+}
+
+.w-9 {
+    width: 9%;
+}
+
+.w-10 {
+    width: 10%;
+}
