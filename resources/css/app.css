@@ -1,5 +1,13 @@
 @import "bootstrap/dist/css/bootstrap.css";
 
+.w-2 {
+    width: 2%;
+}
+
+.w-3 {
+    width: 3%;
+}
+
 .w-4 {
     width: 4%;
 }
@@ -26,4 +34,24 @@
 
 .w-10 {
     width: 10%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.fill-color-gray {
+    fill: gray;
+}
+
+.end-5 {
+    right: 5%;
 }
