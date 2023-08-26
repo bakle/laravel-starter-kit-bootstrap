@@ -3,6 +3,7 @@
 namespace App\Modules\Rbac\Http\Controllers;
 
 use App\Core\Constants\FormTypes;
+use App\Core\Constants\PolicyMethods;
 use App\Http\Controllers\Controller;
 use App\Modules\Rbac\Entities\RoleEntity;
 use App\Modules\Rbac\Http\Requests\RoleFormRequest;
@@ -16,6 +17,11 @@ use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
+    public function __construct()
+    {
+//        $this->authorizeResource(Role::class);
+    }
+
     public function index(Request $request): View
     {
         return view('rbac.roles.index',

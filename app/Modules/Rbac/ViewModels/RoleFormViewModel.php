@@ -24,7 +24,7 @@ class RoleFormViewModel extends BaseFormViewModel
     protected function getExtraAttributes(): array
     {
         return [
-            'permissions' => PermissionEntity::collection(Permission::query()->select(['id', 'name'])->get())
+            'permissions' => PermissionEntity::collection(Permission::query()->latest()->select(['id', 'name'])->get())
         ];
     }
 }
