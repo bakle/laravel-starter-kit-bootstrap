@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function () {
     Route::view('home', 'home')->name('home');
 });
+
+
+require __DIR__ . '/rbac.php';
